@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Anniversary Gift</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <audio id="bgMusic" loop>
+      <source src="https://cdn.pixabay.com/download/audio/2022/10/30/audio_3475e4d197.mp3?filename=lofi-study-112191.mp3" type="audio/mpeg" />
+    </audio>
+
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="Back to top"><span class="brand-mark">&hearts;</span><span>Our Anniversary</span></a>
+      <nav class="nav-links" aria-label="Anniversary sections">
+        <a href="#letter">Letter</a>
+        <a href="#timeline">Timeline</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#songs">Songs</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="hero section-band">
+        <div class="hero-copy">
+          <p class="eyebrow">Happy 2nd Anniversary</p>
+          <h1>To the love I choose every day</h1>
+          <p>This little website is a pocket of memories, promises, songs, and reasons why my heart keeps finding its way back to you.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#letter">Open My Letter</a>
+            <button class="button ghost" id="musicToggle" type="button">Play Music</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="letter" class="section section-light">
+        <div class="section-heading"><p class="eyebrow">Love letter</p><h2>Dear Love,</h2></div>
+        <article class="letter-paper">
+          <p id="typewriter" aria-live="polite"></p>
+          <div class="more-letter" id="moreLetter">
+            <p>Thank you for being my calm place, my loudest laugh, and my favorite person to tell even the smallest stories to. Every day with you has taught me that love is not only found in grand moments. It is in checking on each other, forgiving gently, celebrating quietly, and choosing each other again.</p>
+            <p>I promise to keep learning you, supporting your dreams, listening with patience, and building a future where both of us feel safe, loved, and proud of what we created together.</p>
+          </div>
+          <button class="button primary" id="readMoreBtn" type="button">Read More</button>
+        </article>
+      </section>
+
+      <section id="timeline" class="section section-warm">
+        <div class="section-heading"><p class="eyebrow">Memory timeline</p><h2>Our favorite chapters</h2></div>
+        <div class="timeline" id="timelineList"></div>
+      </section>
+
+      <section id="gallery" class="section section-light">
+        <div class="section-heading"><p class="eyebrow">Photo gallery</p><h2>Pictures I keep close</h2></div>
+        <div class="gallery-toolbar"><button class="button primary" id="slideshowBtn" type="button">Start Slideshow</button></div>
+        <div class="gallery-grid" id="galleryGrid"></div>
+      </section>
+
+      <section id="envelope" class="section section-deep">
+        <div class="section-heading"><p class="eyebrow">Virtual envelope</p><h2>A hidden note for you</h2></div>
+        <button class="envelope" id="envelopeBtn" type="button" aria-expanded="false">
+          <span class="envelope-flap"></span>
+          <span class="envelope-body"></span>
+          <span class="envelope-letter">You are my favorite hello, my safest home, and the future I keep smiling about.</span>
+        </button>
+      </section>
+
+      <section id="songs" class="section section-light">
+        <div class="section-heading"><p class="eyebrow">Our songs</p><h2>The soundtrack of us</h2></div>
+        <div class="songs-grid">
+          <article class="song-card">
+            <h3>Perfect - Ed Sheeran</h3>
+            <p>Because it feels like slow dancing through every ordinary day together.</p>
+            <iframe title="Perfect by Ed Sheeran on YouTube" src="https://www.youtube.com/embed/2Vv-BfVoq4g" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </article>
+          <article class="song-card">
+            <h3>Until I Found You - Stephen Sanchez</h3>
+            <p>Because finding you made the world feel softer and brighter.</p>
+            <iframe title="Until I Found You by Stephen Sanchez on YouTube" src="https://www.youtube.com/embed/GxldQ9eX2wo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </article>
+        </div>
+      </section>
+
+      <section id="reasons" class="section section-warm">
+        <div class="section-heading"><p class="eyebrow">Reasons why I love you</p><h2>One reason at a time</h2></div>
+        <div class="reason-box">
+          <p id="reasonText">Click the button for a reason.</p>
+          <button class="button primary" id="reasonBtn" type="button">Show Another Reason</button>
+        </div>
+      </section>
+
+      <section id="counter" class="section section-light">
+        <div class="section-heading"><p class="eyebrow">Love counter</p><h2>Together for</h2></div>
+        <div class="counter-grid" id="loveCounter" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Photo viewer">
+      <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Close photo">&times;</button>
+      <button class="lightbox-nav prev" id="prevPhoto" type="button" aria-label="Previous photo">&#8249;</button>
+      <figure><img id="lightboxImage" src="" alt="" /><figcaption id="lightboxCaption"></figcaption></figure>
+      <button class="lightbox-nav next" id="nextPhoto" type="button" aria-label="Next photo">&#8250;</button>
+    </div>
+
+    <div class="heart-layer" id="heartLayer" aria-hidden="true"></div>
+    <footer class="footer"><p>Made with love for the person who makes every year sweeter.</p></footer>
+    <script src="script.js"></script>
+  </body>
+</html>
